@@ -1,0 +1,73 @@
+header {
+    background-color: gold;
+    margin : 0 auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top : 0;
+    left: 0;
+}
+
+.genresBlock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap : 20px;
+    width: 1300px;
+    flex-wrap: wrap;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: relative;
+}
+
+.input input[type=text] {
+    width: 300px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0 20px 100px;
+    font-size: 28px;
+    color: red;
+    text-align: center;
+    background-color: orange;
+}
+
+.open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 700px;
+    height: 600px;
+    background-color: red;
+    text-align: center;
+    font-size: 30px;
+    color: blue;
+    position: absolute;
+    top: 300px;
+    right: 100px;
+    overflow: scroll;
+}
+
+.open li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 400px;
+    text-align: center;
+}

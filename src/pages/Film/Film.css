@@ -1,0 +1,70 @@
+.film-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.film-info h1 {
+    font-size: 80px;
+    color: red;
+    text-align: center;
+    cursor: pointer;
+    background-color: blue;
+}
+
+.film-info img {
+    width: 800px;
+    height: 500px;
+}
+
+.film-info h2 {
+    font-size: 55px;
+    color: orangered;
+    text-align: center;
+}
+
+.film-info h3 {
+    font-size: 55px;
+    color: orange;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    font-size: 70px;
+    color: blue;
+    text-align: center;
+    background-color: red;
+}
+
+.film-info p {
+    font-size: 50px;
+    color: #00804f;
+    text-align: center;
+}
+
+.film-info h4 {
+    font-size: 45px;
+    color: red;
+    text-align: center;
+}
+
+.film-info h5 {
+    font-size: 40px;
+    color: orange;
+    text-align: center;
+}
+
+.back {
+    width: 200px;
+    height: 50px;
+    font-size: 40px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto 20px;
+}
