@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import GenresBTN from './GenresBTN/GenresBTN';
 import { fetchSearchFilm, changeText } from '../../store/slices/filmsSlice';
 import './Header.css';
@@ -23,6 +24,11 @@ const Header = () => {
       setOpen(false)
     }
   }, [text]);
+
+  const openToClose = () => {
+    setOpen(false);
+    dispatch(changeText(''));
+  }
   
   return (
     <header>
@@ -50,8 +56,8 @@ const Header = () => {
           {
             search.map((film) => {
               return (
-                <div>
-                  <li key={film.id}>{film.title}</li>
+                <div key={film.id}>
+                  <NavLink className='link' to={`/${film.id}`} onClick={openToClose}>{film.title}</NavLink>
                   <img src={imgBaseUrl + film.poster_path} />
                 </div>
               )

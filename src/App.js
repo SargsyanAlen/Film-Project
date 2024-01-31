@@ -7,6 +7,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
 import Film from './pages/Film/Film';
+import Genre from './pages/Genre/Genre';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/:id' element={<Film />} />
+        <Route path='/genres/:id' element={<Genre />} />
       </Routes>
     </div>
   );

@@ -61,8 +61,8 @@ header {
     overflow: scroll;
 }
 
-.open li {
-    list-style: none;
+.open .link {
+    text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,4 +70,5 @@ header {
     gap: 10px;
     width: 400px;
     text-align: center;
+    font-size: 36px;
 }

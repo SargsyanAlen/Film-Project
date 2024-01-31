@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
-import { fetchOneFilm } from '../../store/slices/filmsSlice';
+import { fetchOneFilm, fetchMovieTrailer } from '../../store/slices/filmsSlice';
 import './Film.css';
 
 const Film = () => {
@@ -11,12 +11,13 @@ const Film = () => {
     const { oneFilm } = useSelector((state) => state.filmsData);
     const dispatch = useDispatch();
     const { id } = useParams();
-
     const navigate = useNavigate();
+    const iframe = useRef(null);
 
     useEffect(() => {
         dispatch(fetchOneFilm(id));
-    }, []);
+        dispatch(fetchMovieTrailer({id, iframe}));
+    }, [id]);
     
     return (
         <>
@@ -32,6 +33,7 @@ const Film = () => {
                 <h4>Film Released : {oneFilm.release_date}</h4>
                 <h5>Film Status : {oneFilm.status}</h5>
                 <h5>Film Tagline : {oneFilm.tagline}</h5>
+                <iframe ref={iframe} />
             </div>
             <button className='back' onClick={() => navigate(-1)}>Go Back</button>
         </>

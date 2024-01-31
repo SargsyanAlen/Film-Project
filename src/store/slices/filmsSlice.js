@@ -25,6 +25,26 @@ export const fetchOneFilm = createAsyncThunk(
     }
 );
 
+export const fetchMovieTrailer = createAsyncThunk(
+    'fetchMovieTrailer',
+    async ({id, iframe}) => {
+        const res = await filmsAPI.getMovieTrailer(id);
+            res.data.results.forEach((video) => {
+                if (video.name === "Official Trailer") {
+                    iframe.current.setAttribute(
+                        "src",
+                        `https://www.youtube.com/embed/${video.key}`
+                    );
+                } else {
+                    iframe.current.setAttribute(
+                        "src",
+                        `https://www.youtube.com/embed/${video.key}`
+                    );
+                }
+            });
+    }
+);
+
 export const fetchSearchFilm = createAsyncThunk(
     'fetchSearchFilm',
     async (text) => {
